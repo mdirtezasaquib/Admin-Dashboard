@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Our Feature's</h2>
+        <ul>
+            <li><a href="index.html"> 📊 Dashboard</a></li>
+                <li><a href="users.html"> 👥 Users</a></li>
+                <li><a href="tasks.html"> ✅ Tasks</a></li>
+                <li><a href="gallery.html"> 🖼️ Gallery</a></li>
+                <li><a href="add-product.html"> 🛒 Add Product</a></li>
+                <li><a href="login.html"> 🔑 Login</a></li>
+                <li><a href="index.html"> 🔒 Log out</a></li>
+        </ul>
+    </div>
+    
+ <main>
+    <header>
+
+        <i id="icon" class="fas fa-bars menu-icon "></i> 
+
+        <h1 class="admin">Task Management</h1>
+
+    </header>
+  
+      <div class="data">
+        <h2>work in progress........</h2>
+      </div>
+     
+
+       
+    
+ </main>
+
+ <script>
+
+
+ let menuIcon = document.querySelector(".menu-icon");
+ let sidebar = document.querySelector(".sidebar");
+
+    
+    menuIcon.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+            sidebar.classList.remove("active");
+        }
+    });
+
+</script>
+
+    
+</body>
+</html>

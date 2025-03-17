@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f8f9fa;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    background: #2c3e50;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.admin{
+    font-size: 30px;
+    margin-top: 1vh;
+    cursor: pointer;
+    color: #333;
+    margin-left: 0;
+    flex: 1;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background: #ecf0f1;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 150px;
+}
+.charts {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chart-box {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 5px;
+    min-width: 300px;
+}
+@media (max-width: 768px) {
+    .stats, .charts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card, .chart-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1000;
+        width: 50vw;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        position: absolute;
+        top: 38px;
+        right: 20px;
+        padding: 10px;
+    }
+    main {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 769px){
+  #icon{
+    display: none;
+  }
+}
+/* ---------------- User -------------- */
+
+.data{
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+.data ul li{
+  line-height: 5vh;
+  font-weight: 500px;
+}
+@media (max-width: 768px) {
+    .data ul li{
+        margin-left: 2vw;
+        line-height: 4vh;
+      }
+
+}
+
+/* ---------------- gallery -------------- */
+
+.content {
+    padding: 20px;
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+
+    #gallery{
+        margin-left: 11vw;
+    }
+}

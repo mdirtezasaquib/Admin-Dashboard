@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-dashboard.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.41.1/apexcharts.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</head>
+<body>
+
+    <div class="container">
+    
+        <nav class="sidebar">
+            <h2>Our Feature's</h2>
+            <ul>
+                <li><a href="index.html"> 📊 Dashboard</a></li>
+                <li><a href="users.html"> 👥 Users</a></li>
+                <li><a href="tasks.html"> ✅ Tasks</a></li>
+                <li><a href="gallery.html"> 🖼️ Gallery</a></li>
+                <li><a href="add-product.html"> 🛒 Add Product</a></li>
+                <li><a href="login.html"> 🔑 Login</a></li>
+                <li><a href="index.html"> 🔒 Log out</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <header>
+                <i id="icon" class="fas fa-bars menu-icon "></i> 
+               
+                <h1 class="admin">Admin Dashboard</h1>
+            </header>
+           
+
+            <section class="stats">
+            
+                <div class="card">
+                    <h3>Users</h3>
+                    <p id="userCount">Loading...</p>
+                </div>
+                <div class="card">
+                    <h3>Posts</h3>
+                    <p id="postCount">Loading...</p>
+                </div>
+                <div class="card">
+                    <h3>Photos</h3>
+                    <p id="photoCount">Loading...</p>
+                </div>
+            </section>
+
+            <section class="charts">
+                <div class="chart-box">
+                    <h3>Top 5 Products</h3>
+                    <div id="bar-chart"></div>
+                </div>
+                <div class="chart-box">
+                    <h3>Purchase and Sales Orders</h3>
+                    <div id="line-chart"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
